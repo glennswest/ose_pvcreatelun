@@ -21,22 +21,29 @@ sequence used by ose_pvcreate_lun
 The tool expects root access, and that targetcli and lvm2
 
 yum -y install targetcli
+
 yum -y install lvm2
 
 ## Preparing the Server
 The following assumes a RHEL 7.X Server
 
 yum -y install targetcli
+
 systemctl start target
+
 systemctl enable target
+
 systemctl restart target.service
+
 firewall-cmd --permanent --add-port=3260/tcp
+
 firewall-cmd --reload
 
 ## Preparing the volume
 This assumes you stripe a set of volumes into a volume group
 
 pvcreate /dev/sdc /dev/sdd /dev/sde /dev/sdf /dev/sdg /dev/sdh /dev/sdi /dev/sdj
+
 vgcreate vg1 /dev/sdc /dev/sdd /dev/sde /dev/sdf /dev/sdg /dev/sdh /dev/sdi /dev/sdj
 
 ## Example
@@ -53,7 +60,6 @@ Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Created LUN 42.
 Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Created LUN 42->42 mapping in node ACL iqn.2016-02.local.azure.nodes
 Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Last 10 configs saved in /etc/target/backup.
 Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Configuration saved to /etc/target/saveconfig.json
-[root@iscsitest ~]# 
 
 ## Listing the iscsi devices
 [root@iscsitest ~]# targetcli / ls
