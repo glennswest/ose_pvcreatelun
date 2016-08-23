@@ -1,5 +1,8 @@
 # ose_pvcreate_lun - Create one of more luns for Openshift Container Platform
 ## A Easy way of creating storage volumes for kubernetes persistent volume
+In Openshift Origin, Openshift Enterprise, Kubernetes, all have a concept of persistant volumes.
+When these are implemented on iscsi, u need to create a large number of storage volumes, that are
+shared via iscsi. This scripts assist in doing that. 
 
 ## General Usage
 The tool can be used to create multiple groups of iscsi storage volumes
