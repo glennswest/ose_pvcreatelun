@@ -1,4 +1,4 @@
-# ose_pvcreate_lun - Create one of more luns for kubernetes persistent storage
+# ose_pvcreate_lun - Create one of more luns for Openshift Container Platform
 ## A Easy way of creating storage volumes for kubernetes persistent volume
 
 ## General Usage
