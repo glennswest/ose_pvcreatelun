@@ -1,0 +1,607 @@
+    1  password cloud
+    2  cat /etc/passwd
+    3  passwd cloud
+    4  subscription-manager register --username gwest@redhat.com --password Apple.Orange200 --auto-attach
+    5  ifconfig
+    6  dhclient eno16777736
+    7  ifconfig
+    8  dhclient eno16777736
+    9  subscription-manager register --username gwest@redhat.com --password Apple.Orange200 --auto-attach
+   10  yum update
+   11  yum update -y
+   12  yum update
+   13  cd /etc/sysconfig/network-scripts/
+   14  ls
+   15  vi ifcfg-eno16777736 
+   16  ifconfig
+   17  ifdown eno16777736
+   18  ifup eno16777736
+   19  ifconfig
+   20  ls
+   21  cat ifcfg-eno16777736 
+   22  sync
+   23  halt
+   24  yum update -y
+   25  subscription-manager --auto-attach
+   26  subscription-manager attach --auto-attach
+   27  subscription-manager register --auto-attach
+   28  subscription-manager status
+   29  yum -y update
+   30  ifconfig
+   31  ifdown eno16777736
+   32  ifup eno16777736
+   33  ifconfig
+   34  yum -y update
+   35  subscription-manager register --auto-attach
+   36  subscription-manager 
+   37  subscription-manager attach 
+   38  subscription-manager attach --auto
+   39  yum update -y
+   40  ifconfig
+   41  ifdown eno16777736
+   42  ifup eno16777736
+   43  ifconfig
+   44  ifup eno16777736
+   45  reboot
+   46  subscription-manager remove --serial=b64c3d92-4fe5-4f2e-8f22-785052f4977b
+   47  subscription-manager remove --serial="b64c3d92-4fe5-4f2e-8f22-785052f4977b"
+   48  subscription-manager unregister --serial="b64c3d92-4fe5-4f2e-8f22-785052f4977b"
+   49  cd
+   50  exit
+   51  subscription-manager list --available
+   52  exit
+   53  subscription-manager register --auto-attach
+   54  subscription-manager register --auto-attach --force
+   55  yum -y install targetcli
+   56  subscription-manager repos --disable="*"
+   57  subscription-manager repos     --enable="rhel-7-server-rpms"     --enable="rhel-7-server-extras-rpms"
+   58  subscription-manager repos     --enable="rhel-7-server-ose-3.2-rpms"
+   59  yum install targetcli
+   60  ls
+   61  vi ose_pvcreate_lun
+   62  ls
+   63  chmod +x ose_pvcreate_lun 
+   64  ls
+   65  lsblk
+   66  pvcreate /dev/sdb
+   67  yum -y lvm2
+   68  yum search lvm
+   69  yum install lvm2
+   70  pvcreate /dev/sdb
+   71  vgcreate vg1 /dev/sdb
+   72  ls
+   73  cat ose_pvcreate_lun 
+   74  ./ose_pvcreate_lun vg1 1g
+   75  lsblk
+   76  pwd
+   77  ls
+   78  vi ose_pvcreate_lun 
+   79  ./ose_pvcreate_lun vg1 1g
+   80  vi ose_pvcreate_lun 
+   81  ./ose_pvcreate_lun vg1 1g
+   82  pwd
+   83  vi ose_pvcreate_lun 
+   84  ./ose_pvcreate_lun vg1 1g
+   85  vi ose_pvcreate_lun 
+   86  ./ose_pvcreate_lun vg1 1g
+   87  vi ose_pvcreate_lun 
+   88  ./ose_pvcreate_lun vg1 1G
+   89  ls
+   90  vi ose_pvcreate_lun 
+   91  ./ose_pvcreate_lun vg1 1G
+   92  ls
+   93  vi ose_pvcreate_lun 
+   94  ./ose_pvcreate_lun vg1 1G
+   95  vi ose_pvcreate_lun 
+   96  lvcreate -l 1G -n vol1 vg1
+   97  lvcreate -L 1G -n vol1 vg1
+   98  ls
+   99  vi ose_pvcreate_lun 
+  100  ./ose_pvcreate_lun vg1 1G
+  101  vi ose_pvcreate_lun 
+  102  ./ose_pvcreate_lun vg1 1G
+  103  history
+  104  lvcreate -L 1G -n vol1 vg1
+  105  lvcreate -L 1G -n vol2 vg1
+  106  ./ose_pvcreate_lun vg1 1G
+  107  vi ose_pvcreate_lun 
+  108  ./ose_pvcreate_lun vg1 1G
+  109  vi ose_pvcreate_lun 
+  110  ./ose_pvcreate_lun vg1 1G
+  111  vi ose_pvcreate_lun 
+  112  ./ose_pvcreate_lun vg1 1G
+  113  ls
+  114  cat ose_pvcreate_lun 
+  115  echo $file
+  116  vi ose_pvcreate_lun 
+  117  echo $file
+  118  ./ose_pvcreate_lun vg1 1G
+  119  cat /etc/target/saveconfig.json 
+  120  ls
+  121  cat ose_pvcreate_lun 
+  122  cat echo $lunfile
+  123  echo $lunfile
+  124  vi ose_pvcreate_lun 
+  125  ./ose_pvcreate_lun vg1 1G
+  126  echo $lunfile
+  127  cat ose_pvcreate_lun 
+  128  cat .osepvcreateluncount.cnt
+  129  vi ose_pvcreate_lun 
+  130  cat .osepvcreateluncount.cnt
+  131  ./ose_pvcreate_lun vg1 1G
+  132  vi ose_pvcreate_lun 
+  133  ./ose_pvcreate_lun vg1 1G
+  134  vi ose_pvcreate_lun 
+  135  man targetcli
+  136  l
+  137  ls
+  138  vi ose_pvcreate_lun 
+  139  ./ose_pvcreate_lun vg1 1G
+  140  vi ose_pvcreate_lun 
+  141  ./ose_pvcreate_lun vg1 1G
+  142  vi ose_pvcreate_lun 
+  143  pwd
+  144  vi ose_pvcreate_lun 
+  145  ./ose_pvcreate_lun vg1 1G
+  146  vi ose_pvcreate_lun 
+  147  ./ose_pvcreate_lun vg1 1G
+  148  vi ose_pvcreate_lun 
+  149  ls ~
+  150  rm !
+  151  touch ~/oseluncount.lun
+  152  rm oseluncount.lun 
+  153  vi ose_pvcreate_lun 
+  154  ./ose_pvcreate_lun vg1 1G
+  155  vi ose_pvcreate_lun 
+  156  ./ose_pvcreate_lun vg1 1G
+  157  ls
+  158  vi ose_pvcreate_lun 
+  159  cp ose_pvcreate_lun ose_setup_targetcli
+  160  vi ose_setup_targetcli 
+  161  vi ose_pvcreate_lun 
+  162  vi ose_setup_targetcli 
+  163  ./ose_setup_targetcli
+  164  ./ose_pvcreate_lun vg1 1G
+  165  ls
+  166  vi ose_pvcreate_lun
+  167  ./ose_pvcreate_lun vg1 1G
+  168  vi ose_pvcreate_lun
+  169  ./ose_pvcreate_lun vg1 1G
+  170  vi ose_pvcreate_lun
+  171  ./ose_pvcreate_lun vg1 1G
+  172  ./ose_setup_targetcli
+  173  vi ose_setup_targetcli 
+  174  ./ose_setup_targetcli 
+  175  ./ose_pvcreate_lun vg1 1G
+  176  ls
+  177  vi ose_pvcreate_lun
+  178  ./ose_pvcreate_lun vg1 1G
+  179  vi ose_pvcreate_lun
+  180  ./ose_pvcreate_lun vg1 1G
+  181  vi ose_pvcreate_lun
+  182  ./ose_pvcreate_lun vg1 1G
+  183  ls
+  184  cat ose_setup_targetcli 
+  185  ./ose_setup_targetcli 
+  186  ./ose_pvcreate_lun vg1 1G
+  187  ls
+  188  cat ose_setup_targetcli 
+  189  targetcli / ls
+  190  ./ose_pvcreate_lun vg1 1G
+  191  targetcli / ls
+  192  ./ose_pvcreate_lun vg1 1G
+  193  targetcli / ls
+  194  ls
+  195  ./ose_setup_target
+  196  ./ose_setup_targetcli 
+  197* 
+  198  cat ose_setup_targetcli 
+  199  ./ose_setup_targetcli 
+  200  ./ose_pvcreate_lun vg1 1G
+  201  history
+  202  targetcli / ls
+  203  ls
+  204  vi ose_setup_targetcli 
+  205  ls
+  206  vi ose_pvcreate_lun 
+  207  ./ose_pvcreate_lun vg1 1G
+  208  history
+  209  pwd
+  210  ls
+  211  vi ose_pvcleanup
+  212  chmod +x ose_pvcleanup 
+  213  ./ose_pvcleanup 
+  214  history
+  215  targetcli / ls
+  216  ls
+  217  history | grep pvcreate
+  218  pvcreate /dev/sdb
+  219  pvcreate -f /dev/sdb
+  220  pvcreate
+  221  pvcreate --help
+  222  pvcreate --force /dev/sdb
+  223  lvdelete
+  224  lvremove --help
+  225  lvdisplay
+  226  lvremove /dev/vg1/*
+  227  lvremove --help
+  228  ls
+  229  vi ose_pvcleanup 
+  230  ./ose_pvcleanup 
+  231  ls
+  232  vi ose_pvcreate_lun 
+  233  vi ose_pvcreate_lun
+  234  ls
+  235  vi ose_pvcleanup 
+  236  ./ose_pvcleanup 
+  237  vi ose_pvcleanup 
+  238  rm ~/oseluncount.cnt
+  239  vi ose_pvcleanup 
+  240  ls
+  241  history
+  242  ./ose_pvcreate_lun vg1 1G
+  243  history
+  244  targetcli / ls
+  245  ./ose_pvcreate_lun vg1 1G
+  246  ls
+  247  vi ose_pvcreate_lun 
+  248  ./ose_pvcreate_lun vg1 1G
+  249  vi ose_pvcreate_lun 
+  250  ./ose_pvcreate_lun vg1 1G
+  251  vi ose_pvcreate_lun 
+  252  logger "Test"
+  253  dmesg | less
+  254  dmesg | tail
+  255  tail /var/log/messages
+  256  ls
+  257  vi ose_pvcreate_lun 
+  258  ./ose_pvcreate_lun vg1 1G
+  259  vi ose_pvcreate_lun 
+  260  ./ose_pvcreate_lun vg1 1G
+  261  vi ose_pvcreate_lun 
+  262  ./ose_pvcreate_lun vg1 1G
+  263  vi ose_pvcreate_lun 
+  264  ./ose_pvcreate_lun vg1 1G
+  265  history
+  266  tail /var/log/messages
+  267  ls
+  268  ls /usr/local/bin
+  269  ls
+  270  ose_pvcreate_lun 
+  271  ls
+  272  ./ose_pvcleanup
+  273  ls
+  274  mkfs.ext4 ls
+  275  ls
+  276  vi ose_pvcreate_lun
+  277  ./ose_pvcreate_lun vg1 1G
+  278  vi ose_pvcreate_lun
+  279  ./ose_pvcreate_lun vg1 1G
+  280  vi ose_pvcreate_lun
+  281  ./ose_pvcreate_lun vg1 1G
+  282  tail /var/log/messages
+  283  vi ose_pvcreate_lun
+  284  ./ose_pvcreate_lun vg1 1G
+  285  tail /var/log/messages
+  286  cat /var/log/messages
+  287  vi ose_pvcreate_lun
+  288  ./ose_pvccreate_lun
+  289  ./ose_pvcreate_lun 
+  290  vi ose_pvcreate_lun
+  291  ./ose_pvcreate_lun 
+  292  vi ose_pvcreate_lun
+  293  ./ose_pvcreate_lun 
+  294  vi ose_pvcreate_lun
+  295  ./ose_pvcreate_lun 
+  296  vi ose_pvcreate_lun
+  297  ./ose_pvcreate_lun 
+  298  ./ose_pvcreate_lun vg1 1G
+  299  vi ose_pvcreate_lun 
+  300  ./ose_pvcreate_lun vg1 1G
+  301  vi ose_pvcreate_lun 
+  302  ./ose_pvcreate_lun vg1 1G
+  303  vi ose_pvcreate_lun 
+  304  ./ose_pvcreate_lun vg1 1G
+  305  vi ose_pvcreate_lun 
+  306  ./ose_pvcreate_lun vg1 1G
+  307  tail /var/log/messages
+  308  ./ose_pvcreate_lun vg1 1G
+  309  tail /var/log/messages
+  310  ./ose_pvcreate_lun vg1 1G
+  311  tail /var/log/messages
+  312  ./ose_pvcreate_lun vg1 1G 10
+  313  tail /var/log/messages
+  314  pwd
+  315  ls
+  316  vi ose_pvcreate_lun
+  317  ./ose_pvcreate_lun vg1 1G 10 100
+  318  tail /var/log/messages
+  319  ./ose_pvcreate_lun vg1 1G 10
+  320  tail /var/log/messages
+  321  history
+  322  history | grep list
+  323  history | grep target
+  324  history | grep targetcli
+  325  targetcli / ls
+  326  ls
+  327  ./ose_pvcreate_lun vg1 1G 10
+  328  targetcli / ls
+  329  vi ose_pvcreate_lun
+  330  ./ose_pvcreate_lun vg1 1G 10
+  331  vi ose_pvcreate_lun
+  332  ./ose_pvcreate_lun vg1 1G 10
+  333  vi ose_pvcreate_lun
+  334  ./ose_pvcreate_lun vg1 1G 10
+  335  vi ose_pvcreate_lun
+  336  ./ose_pvcreate_lun vg1 1G 10
+  337  vi ose_pvcreate_lun
+  338  ./ose_pvcreate_lun vg1 1G 10
+  339  ls
+  340  vi ose_pvcreate_lun 
+  341  targetcli / ls
+  342  ./ose_pvcreate_lun vg1 1G 10
+  343  targetcli / ls
+  344  vi ose_pvcreate_lun 
+  345  ls
+  346  rm anaconda-ks.cfg 
+  347  git init
+  348  yum -y install git
+  349  git init
+  350  ls
+  351  git add ose*
+  352  git status
+  353  git commit -a -m "Initial Commit"
+  354  git config --global user.email "gwest@redhat.com"
+  355  git config --global user.name "glennswest"
+  356  git commit -a -m "Initial Commit"
+  357  git remote add origin https://github.com/glennswest/ose_pvcreatelun.git
+  358  git push -u origin master
+  359  git status
+  360  ls
+  361  vi history
+  362  ls
+  363  vi readme
+  364  history
+  365  vi readme
+  366  ls
+  367  cat ose_pvcleanup
+  368  cat ose_setup_targetcli 
+  369  ls
+  370  cat ose_pvcreate_lun
+  371  ls
+  372  rm ose_setup_targetcli 
+  373  ls
+  374  vi readme
+  375  git add readme
+  376  git commit -a -m "Add readme"
+  377  git push origin master
+  378  mv readme readme.md
+  379  git add readme.md
+  380  git commit -a -m "Rename Readme"
+  381  git push origin master
+  382  vi readme.md
+  383  git add readme.md
+  384  git commit -a -m "Fix readme header"
+  385  git push origin master
+  386  vi readme.md 
+  387  history | grep yum
+  388  vi readme.md 
+  389  git add readme.md
+  390  git commit -a -m "Add setup details"
+  391  git push origin master
+  392  tail /var/log/messages
+  393  history
+  394  ./ose_pvcreate_lun vg1 1G 4
+  395  tail /var/log/messages
+  396  vi readme.md 
+  397  history | grep targetcli
+  398  reset
+  399  targetcli / ls
+  400  vi readme.md
+  401  git add readme.me
+  402  git add readme.md
+  403  ls
+  404  git commit -a -m "Add examples"
+  405  git push origin master
+  406  vi readme.md
+  407  git add readme.md
+  408  git commit -a -m "Add examples"
+  409  git push origin master
+  410  vi readme.md
+  411  git add readme.md
+  412  git commit -a -m "Fix line wrap"
+  413  git push origin master
+  414  vi readme.md 
+  415  git add readme.md
+  416  git commit -a -m "Add a better usage info"
+  417  git push origin master
+  418  iscsiadm --mode node --targetname iqn
+  419  ls
+  420  vi ose_setup_initiator
+  421  ls
+  422  cat ose_setup_initiator 
+  423  ls
+  424  cat ose_pvcreate_lun 
+  425  ls
+  426  vi ose_setup_initiator 
+  427  vi lsiscsi
+  428  chmod +x lsiscsi
+  429  lsiscsi
+  430  ./lsiscsi localhost
+  431  ls
+  432  chmod +x ose_setup_initiator 
+  433  ./ose_setup_initiator 
+  434  ls
+  435  ./lsiscsi
+  436  iscsiadm
+  437  vi lsiscsi 
+  438  ls
+  439  ./lsiscsi 
+  440  ls
+  441  cat ose_pvcreate_lun
+  442  ls
+  443  vi lsiscsi
+  444  ]./lsiscsi
+  445  ./lsiscsi 
+  446  ls
+  447  vi lsiscsi 
+  448  ip addr
+  449  lsiscsi 172.16.55.177
+  450  ./lsiscsi 172.16.55.177
+  451  vi lsiscsi 
+  452  vi lsiscsi
+  453  ./lsiscsi 172.16.55.177
+  454  ls
+  455  cat readme.md 
+  456  targetcli / ls
+  457  systemctl status iscsi
+  458  systemctl restart iscsi
+  459  systemctl status iscsi
+  460  ./lsiscsi 172.16.55.177
+  461  lsblk --scsi
+  462  ls
+  463  vi lsiscsi 
+  464  lsblk --scsi
+  465  man lsblk
+  466  vi lsiscsi 
+  467  ./lsiscsi
+  468  ls
+  469  vi ose_pvcreate_lun
+  470  ls
+  471  vi ose_pvcreate_lun 
+  472  ls
+  473  ./ose_pvcleanup 
+  474  ls
+  475  history | grep ose
+  476  ./ose_pvcreate_lun vg1 1G 1000
+  477  ls
+  478  lvdisplay 
+  479  ls
+  480  ./ose_pvcleanup 
+  481  lvdisplay 
+  482  ls
+  483  vi ose_pvcreate_lun 
+  484  man mkfs.ext4
+  485  vi ose_pvcreate_lun 
+  486  ./ose_pvcreate_lun vg1 1G 10
+  487  vi ose_pvcreate_lun 
+  488  ./ose_pvcreate_lun vg1 1G 10
+  489  vi ose_pvcreate_lun 
+  490  ./ose_pvcreate_lun vg1 1G 10
+  491  vi ose_pvcreate_lun 
+  492  ./ose_pvcreate_lun vg1 1G 10
+  493  ls
+  494  ./ose_pvcleanup 
+  495  ./ose_pvcreate_lun vg1 1G 10
+  496  ls
+  497  vi ose_pvcreate_lun 
+  498  :
+  499  ls
+  500  history
+  501* 
+  502  mkfs
+  503  mkfs.ext4 --help
+  504  man mkfs.ext4
+  505  history
+  506  lvidisplay
+  507  lvdisplay 
+  508  mkfs.ext4 /dev/vg1/vol1x1G 
+  509  ls
+  510  ./ose_pvcleanup 
+  511  history
+  512  ./ose_pvcreate_lun vg1 1G 10
+  513  pwd
+  514  ls
+  515  vi ose_pvcreate_lun 
+  516  ls
+  517  ./ose_pvcleanup 
+  518  history
+  519  ./ose_pvcreate_lun vg1 1G 10
+  520  mkfs.ext4 /dev/vg1/vol1x1G
+  521  lsblk
+  522  ls
+  523  vi ose_pvcleanup 
+  524  cat ose_pvcreate_lun 
+  525  ls
+  526  cat readme
+  527  ls
+  528  ./ose_pvcleanup
+  529  ls
+  530  cat readme.md
+  531  ls
+  532  vi ose_pvcleanup 
+  533  ./ose_pvcleanup 
+  534  ls
+  535  lsblk 
+  536  ls
+  537  history
+  538  ./ose_pvcreate_lun vg1 1G 10
+  539  ls
+  540  vi ose_pvcreate_lun 
+  541  ls
+  542  ./ose_pvcleanup 
+  543  ls
+  544  ./ose_pvcreate_lun vg1 1G 10
+  545  ls
+  546  vi ose_pvcreate_lun 
+  547  man mkfs.ext4
+  548  vi ose_pvcreate_lun
+  549  lsblk
+  550  ls
+  551  ./ose_pvcreate_lun vg1 1G 10
+  552  ls /dev/vg1/vol10x1G 
+  553  ls -l /dev/vg1/vol10x1G 
+  554  ls ../dev/vg1/dm-9
+  555  cd /dev
+  556  ls
+  557  cd vg1
+  558  ls
+  559  ls -l
+  560  cd ..
+  561  cd dm9
+  562  cd dm-9
+  563  ls -l
+  564  ls -l dm9
+  565  ls -l dm-9
+  566  ls
+  567  pwd
+  568  ls
+  569  cd
+  570  ls
+  571  cat ose_setup_initiator 
+  572  systemctl restart iscsi
+  573  lsblk
+  574  ls
+  575  cat ose_setup_initiator 
+  576  ls
+  577  lsiscsi
+  578  history | grep lsiscsi
+  579  ./lsiscsi 172.16.55.177
+  580  ls
+  581  ./ose_pvcleanup 
+  582  ls
+  583  ./lsiscsi 172.16.55.177
+  584  systectl restart iscsi
+  585  systemctl restart iscsi
+  586  ./lsiscsi 172.16.55.177
+  587  ls
+  588  targetcli
+  589  mount
+  590  ls
+  591  vi ose_pvcreate_lun 
+  592  ./ose_pvcreate_lun vg1 1G 10
+  593  ls
+  594  history
+  595  ls
+  596  cat ose_setup_initiator 
+  597  history | grep lvcreate
+  598  history | less
+  599  vgdelete vg1 
+  600  vgremove vg1
+  601  mount
+  602  vgremove vg1
+  603  vgremove -F vg1
+  604  man vgremove
+  605  vgremove --force vg1
+  606  ls
+  607  history > notes

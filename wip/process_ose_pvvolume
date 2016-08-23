@@ -1,0 +1,2 @@
+./lsiscsi $1 | grep osedsk  
+

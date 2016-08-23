@@ -1,0 +1,4 @@
+iscsiadm --mode discovery --type sendtargets --portal $1
+iscsiadm --mode node --targetname iqn.2016-02.local.store1:t1 portal: $1 --login
+lsblk -n -l --scsi
+
