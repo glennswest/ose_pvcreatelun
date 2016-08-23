@@ -49,17 +49,16 @@ vgcreate vg1 /dev/sdc /dev/sdd /dev/sde /dev/sdf /dev/sdg /dev/sdh /dev/sdi /dev
 ## Example
 # Create four 1 gig devices and export them
 ./ose_pvcreate_lun vg1 1G 4
-[root@iscsitest ~]# tail /var/log/messages
-Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Allocating group tables: 0/8#010#010#010   #010#010#010done
-Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Writing inode tables: 0/8#010#010#010   #010#010#010done
-Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Creating journal (8192 blocks): done
-Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Writing superblocks and filesystem accounting information: 0/8#010#010#010   #010#010#010done
-Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: 
-Aug 22 18:35:07 iscsitest root: Created block storage object vol43x1G_server using /dev/vg1/vol43x1G.
-Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Created LUN 42.
-Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Created LUN 42->42 mapping in node ACL iqn.2016-02.local.azure.nodes
-Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Last 10 configs saved in /etc/target/backup.
-Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Configuration saved to /etc/target/saveconfig.json
+[root@iscsitest ~]# tail /var/log/messages  
+Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Allocating group tables: 0/8#010#010#010   #010#010#010done  
+Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Writing inode tables: 0/8#010#010#010   #010#010#010done  
+Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Creating journal (8192 blocks): done  
+Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Writing superblocks and filesystem accounting information: 0/8#010#010#010   #010#010#010done  
+Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun:   
+Aug 22 18:35:07 iscsitest root: Created block storage object vol43x1G_server using /dev/vg1/vol43x1G.  
+Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Created LUN 42.  
+Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Created LUN 42->42 mapping in node ACL iqn.2016-02.local.azure.nodes  
+Aug 22 18:35:07 iscsitest ./ose_pvcreate_lun: Configuration saved to /etc/target/saveconfig.json  
 
 ## Listing the iscsi devices
 [root@iscsitest ~]# targetcli / ls
