@@ -1,0 +1,4 @@
+targetcli clearconfig confirm=true
+lvremove --force /dev/vg1/*
+rm -f ~/.oseluncount.cnt
+

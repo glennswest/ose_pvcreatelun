@@ -1,0 +1,7 @@
+targetcli /iscsi create iqn.2016-02.local.store1
+targetcli /iscsi/iqn.2016-02.local.store1/tpg1/acls create iqn.2016-02.local.azure.nodes
+targetcli /iscsi/iqn.2016-02.local.store1/tpg1/ set attribute authentication=0
+targetcli / ls
+targetcli saveconfig
+
+
