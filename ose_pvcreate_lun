@@ -40,13 +40,13 @@ lvcreate -L $2 -n $volname $1 | logger --tag $TAG
 mkfs.ext4 -q -F _F /dev/vg1/$volname 2>&1 | logger --tag $TAG
 if [ ${count} -eq 1 ]; then
      echo "Setup device"
-     targetcli /iscsi create iqn.2016-02.local.store1 | logger --tag $TAG
-     targetcli /iscsi/iqn.2016-02.local.store1/tpg1/acls create iqn.2016-02.local.azure.nodes | logger --tag $TAG
-     targetcli /iscsi/iqn.2016-02.local.store1/tpg1/ set attribute authentication=0 | logger --tag $TAG
+     targetcli /iscsi create iqn.2016-02.local.store1:t1 |  logger --tag $TAG
+     targetcli /iscsi/iqn.2016-02.local.store1:t1/tpg1/acls create iqn.2016-02.local.azure.nodes | logger --tag $TAG
+     targetcli /iscsi/iqn.2016-02.local.store1:t1/tpg1/ set attribute authentication=0 | logger --tag $TAG
      targetcli saveconfig
 fi
-targetcli backstores/block/ create "$volname"_osedsk /dev/vg1/"$volname" | logger
-targetcli /iscsi/iqn.2016-02.local.store1/tpg1/luns create /backstores/block/"$volname"_osedsk | logger --tag $TAG
+targetcli backstores/block/ create "$volname" /dev/vg1/"$volname" |  logger --tag $TAG
+targetcli /iscsi/iqn.2016-02.local.store1:t1/tpg1/luns create /backstores/block/"$volname" | logger --tag $TAG
 
 targetcli saveconfig | logger --tag $TAG
 

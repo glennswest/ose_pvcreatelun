@@ -1,0 +1,25 @@
+sfdisk /dev/sdc << EOF
+;
+EOF
+sfdisk /dev/sdd << EOF
+;
+EOF
+sfdisk /dev/sde << EOF
+;
+EOF
+sfdisk /dev/sdf << EOF
+;
+EOF
+sfdisk /dev/sdg << EOF
+;
+EOF
+sfdisk /dev/sdh << EOF
+;
+EOF
+sfdisk /dev/sdi << EOF
+;
+EOF
+sfdisk /dev/sdj << EOF
+;
+EOF
+
