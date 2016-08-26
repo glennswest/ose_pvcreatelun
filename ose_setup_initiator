@@ -1,4 +1,4 @@
 yum install -y iscsi-initiator-utils
 echo "InitiatorName=iqn.2016-02.local.azure.nodes" > /etc/iscsi/initiatorname.iscsi
 systemctl start iscsi
-
+systemctl enable iscsi
