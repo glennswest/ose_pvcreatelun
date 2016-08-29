@@ -4,6 +4,10 @@
 # $2 = size
 # #3 = count
 
+if [[ -z ${stripsize+x} ]]; then
+   stripsize=8
+   fi
+
 if [ $# -eq 0 ]; then
    echo "pvcreatelun volgroup size count"
    echo "    volgroup is the volgroup as created by vgcreate"
@@ -36,7 +40,7 @@ echo ${count} > ${LUNFILE}
 
 export volname=ose"$count"x"$2"
 
-lvcreate -L $2 -n $volname $1 | logger --tag $TAG
+lvcreate -L $2 -i$stripsize -I64 -n $volname $1 | logger --tag $TAG
 mkfs.ext4 -q -F _F /dev/vg1/$volname 2>&1 | logger --tag $TAG
 if [ ${count} -eq 1 ]; then
      echo "Setup device"
