@@ -218,4 +218,9 @@ the first time its executed. It automatically creates volume names, and
 uses a hidden file to keep track of a auto incrementing number. 
 The script uses recursion in order to create greater than 1 device in a 
 single execution. 
+
+On creation of the lun, it creates the needed yml file to register the lun for
+openshift, copyies it using scp (ssh), and then executes the openshift oc command remotely
+via ssh.
+
 The script redirects all messages to system log. 
