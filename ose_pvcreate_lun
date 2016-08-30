@@ -13,6 +13,7 @@ if [ $# -eq 0 ]; then
    echo "    volgroup is the volgroup as created by vgcreate"
    echo "    size - example 1G"
    echo "    count - Optional - Number of luns to create"
+   echo " $OSEUSERNAME should be set to the Openshift User Name"
    exit 0
    fi
 # Call ourselves recursively to do repeats
@@ -24,6 +25,7 @@ if [ $# -eq 3 ]; then
     exit 0
    fi
 
+STOREIP=$(hostname --ip-address)
 LUNFILE=~/.oseluncount.cnt
 TAG=$0
 
@@ -34,6 +36,7 @@ else
     count=0
 fi
 
+lunid=${count}
 ((count++))
 
 echo ${count} > ${LUNFILE}
@@ -53,5 +56,26 @@ targetcli backstores/block/ create "$volname" /dev/vg1/"$volname" |  logger --ta
 targetcli /iscsi/iqn.2016-02.local.store1:t1/tpg1/luns create /backstores/block/"$volname" | logger --tag $TAG
 
 targetcli saveconfig | logger --tag $TAG
+
+cat <<EOF > $volname.yml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: iscsipv${lunid}
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  iscsi:
+     targetPortal: $STOREIP
+     iqn: iqn.2016-02.local.store1:t1
+     lun: ${lunid}
+     fsType: 'ext4'
+     readOnly: false
+
+EOF
+scp $volname.yml ${OSEUSERNAME}@master1:~
+ssh -t ${OSEUSERNAME}@master1 sudo oc create -f /home/${OSEUSERNAME}/$volname.yml
 
 
