@@ -75,7 +75,5 @@ spec:
      readOnly: false
 
 EOF
-scp $volname.yml ${OSEUSERNAME}@master1:~
-ssh -t ${OSEUSERNAME}@master1 sudo oc create -f /home/${OSEUSERNAME}/$volname.yml
-
-
+oc create -f $volname.yml
+rm -f $volname.yml
