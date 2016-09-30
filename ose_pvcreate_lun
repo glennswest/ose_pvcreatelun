@@ -54,7 +54,7 @@ export volname=ose"$count"x"$2"
 printf -v padcnt "%03d" $count
 export padcnt
 
-lvcreate -L $2 -i$stripsize -I64 -n $volname $1 | logger --tag $TAG
+lvcreate -L $2G -i$stripsize -I64 -n $volname $1 | logger --tag $TAG
 mkfs.ext4 -q -F _F /dev/vg1/$volname 2>&1 | logger --tag $TAG
 if [ ${count} -eq 1 ]; then
      echo "Setup device"

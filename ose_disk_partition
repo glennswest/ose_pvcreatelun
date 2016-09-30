@@ -1,25 +1,10 @@
-sfdisk /dev/sdc << EOF
-;
-EOF
-sfdisk /dev/sdd << EOF
-;
-EOF
-sfdisk /dev/sde << EOF
-;
-EOF
-sfdisk /dev/sdf << EOF
-;
-EOF
-sfdisk /dev/sdg << EOF
-;
-EOF
-sfdisk /dev/sdh << EOF
-;
-EOF
-sfdisk /dev/sdi << EOF
-;
-EOF
-sfdisk /dev/sdj << EOF
-;
-EOF
-
+parted --script -a optimal /dev/sdc mklabel gpt mkpart primary ext2 1M 100% set 1 lvm on
+parted --script -a optimal /dev/sdd mklabel gpt mkpart primary ext2 1M 100% set 1 lvm on
+parted --script -a optimal /dev/sde mklabel gpt mkpart primary ext2 1M 100% set 1 lvm on
+parted --script -a optimal /dev/sdf mklabel gpt mkpart primary ext2 1M 100% set 1 lvm on
+parted --script -a optimal /dev/sdg mklabel gpt mkpart primary ext2 1M 100% set 1 lvm on
+parted --script -a optimal /dev/sdh mklabel gpt mkpart primary ext2 1M 100% set 1 lvm on
+parted --script -a optimal /dev/sdi mklabel gpt mkpart primary ext2 1M 100% set 1 lvm on
+parted --script -a optimal /dev/sdj mklabel gpt mkpart primary ext2 1M 100% set 1 lvm on
+pvcreate /dev/sdc1 /dev/sdd1 /dev/sde1 /dev/sdf1 /dev/sdg1 /dev/sdh1 /dev/sdi1 /dev/sdj1
+vgcreate vg1 /dev/sdc1 /dev/sdd1 /dev/sde1 /dev/sdf1 /dev/sdg1 /dev/sdh1 /dev/sdi1 /dev/sdj1
