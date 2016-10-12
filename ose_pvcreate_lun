@@ -50,9 +50,9 @@ lunid=${count}
 
 echo ${count} > ${LUNFILE}
 
-export volname=ose"$count"x"$2"
 printf -v padcnt "%03d" $count
 export padcnt
+export volname="ose${dcount}n${padcnt}x$2"
 
 lvcreate -L $2G -i$stripsize -I64 -n $volname $1 | logger --tag $TAG
 mkfs.ext4 -q -F _F /dev/vg1/$volname 2>&1 | logger --tag $TAG
@@ -61,6 +61,10 @@ if [ ${count} -eq 1 ]; then
      targetcli /iscsi create iqn.2016-02.local.store${dcount}:t1 |  logger --tag $TAG
      targetcli /iscsi/iqn.2016-02.local.store${dcount}:t1/tpg1/acls create iqn.2016-02.local.azure.nodes | logger --tag $TAG
      targetcli /iscsi/iqn.2016-02.local.store${dcount}:t1/tpg1/ set attribute authentication=0 | logger --tag $TAG
+     targetcli /iscsi/iqn.2016-02.local.store${dcount}:t1/tpg1/ set parameter DefaultTime2Retain=60 | logger --tag $TAG
+     targetcli /iscsi/iqn.2016-02.local.store${dcount}:t1/tpg1/ set parameter DefaultTime2Wait=12 | logger --tag $TAG
+     targetcli /iscsi/iqn.2016-02.local.store${dcount}:t1/tpg1/ set parameter MaxConnections=10000 | logger --tag $TAG
+     targetcli /iscsi/iqn.2016-02.local.store${dcount}:t1/tpg1/ set attribute prod_mode_write_protect=0 | logger --tag $TAG
      targetcli saveconfig
 fi
 
